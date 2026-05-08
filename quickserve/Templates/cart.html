@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart</title>
+
+    <link href="{% static 'cart.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="cart-container">
+
+        <h1 class="cart-title">🛒 My Cart</h1>
+
+        <div class="welcome-text">
+            Hi <b>{{username}}</b>, here are your items
+        </div>
+
+        <table class="cart-table">
+
+            <thead>
+                <tr>
+                    <th>Item Image</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for item in itemList %}
+                <tr>
+
+                    <td>
+                        <img src="{{ item.picture }}" class="cart-image">
+                    </td>
+
+                    <td class="item-name">
+                        {{ item.name }}
+                    </td>
+
+                    <td class="item-description">
+                        {{ item.description }}
+                    </td>
+
+                    <td class="item-price">
+                        ₹ {{ item.price }}
+                    </td>
+
+                </tr>
+                {% endfor %}
+            </tbody>
+
+        </table>
+
+        <div class="total-box">
+            Total Price : ₹ {{total_price}}
+        </div>
+
+        <form action="{% url 'checkout' username %}">
+            <input type="submit" value="CHECK OUT" class="checkout-btn"/>
+        </form>
+
+    </div>
+
+</body>
+</html>

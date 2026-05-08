@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+
+    background:
+    linear-gradient(rgba(15,15,15,0.85), rgba(15,15,15,0.85)),
+    url("https://images.unsplash.com/photo-1511920170033-f8396924c348");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:30px;
+}
+
+body::before{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    background:#d4a762;
+    border-radius:50%;
+    top:-100px;
+    right:-100px;
+    filter:blur(120px);
+}
+
+body::after{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    background:#7b4b2a;
+    border-radius:50%;
+    bottom:-100px;
+    left:-100px;
+    filter:blur(120px);
+}
+
+h1,h2,h3{
+    color:white;
+    text-align:center;
+}
+
+h1{
+    font-size:48px;
+    margin-bottom:10px;
+    letter-spacing:2px;
+}
+
+h2{
+    font-size:20px;
+    margin-bottom:30px;
+    color:#ddd;
+}
+
+table{
+    width:700px;
+    border-collapse:collapse;
+
+    backdrop-filter:blur(20px);
+    background:rgba(255,255,255,0.08);
+
+    border:1px solid rgba(255,255,255,0.2);
+
+    border-radius:20px;
+    overflow:hidden;
+
+    box-shadow:0 8px 32px rgba(0,0,0,0.4);
+}
+
+thead{
+    background:rgba(212,167,98,0.2);
+}
+
+th{
+    padding:18px;
+    color:#f5e6d3;
+    font-size:18px;
+}
+
+td{
+    padding:18px;
+    text-align:center;
+    color:white;
+    border-top:1px solid rgba(255,255,255,0.1);
+}
+
+tr{
+    transition:0.3s;
+}
+
+tr:hover{
+    background:rgba(255,255,255,0.08);
+}
+
+h3{
+    margin-top:30px;
+    font-size:32px;
+    color:#d4a762;
+}
+
+#rzp-button{
+    margin:35px auto;
+    display:block;
+
+    padding:16px 40px;
+
+    border:none;
+    border-radius:50px;
+
+    background:linear-gradient(135deg,#d4a762,#7b4b2a);
+
+    color:white;
+    font-size:18px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.4s;
+
+    box-shadow:0 8px 25px rgba(212,167,98,0.4);
+}
+
+#rzp-button:hover{
+    transform:translateY(-4px) scale(1.03);
+
+    box-shadow:0 12px 35px rgba(212,167,98,0.6);
+}
